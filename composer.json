@@ -1,0 +1,24 @@
+{
+  "name": "mrcat/suitecrm-orm",
+  "description": "ORM SUITECRM for PHP",
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "freddy vargas",
+      "email": "fjvargas0629@gmail.com"
+    }
+  ],
+  "require": {
+    "mrcat29/html": "^0.0.1",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "MrCat\\": "src/mrcat"
+    },
+    "files": [
+      "MrCat/SuiteCrm/helpers.php"
+    ]
+  }
+}
