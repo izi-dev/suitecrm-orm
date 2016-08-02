@@ -18,7 +18,7 @@
       "MrCat\\": "src/mrcat"
     },
     "files": [
-      "MrCat/SuiteCrm/helpers.php"
+      "src/mrcat/SuiteCrm/helpers.php"
     ]
   }
 }
