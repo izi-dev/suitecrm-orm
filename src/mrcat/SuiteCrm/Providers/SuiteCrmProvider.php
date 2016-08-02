@@ -27,15 +27,12 @@ class SuiteCrmProvider extends ServiceProvider
      */
     public function register()
     {
-        if (! is_null(config('suitecrm.api'))) {
-            Api::config([
-                'base_uri' => config('suitecrm.api.base_uri'),
-                'uri'      => config('suitecrm.api.uri'),
-            ])->addSession(
-                config('suitecrm.api.user'),
-                config('suitecrm.api.password')
-            );
-        }
-
+        Api::config([
+            'base_uri' => config('suitecrm.api.base_uri'),
+            'uri'      => config('suitecrm.api.uri'),
+        ])->addSession(
+            config('suitecrm.api.user'),
+            config('suitecrm.api.password')
+        );
     }
 }
