@@ -16,8 +16,8 @@ class SuiteCrmProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/config.php' => config_path('suitecrm.php'),
-        ], 'suitecrm');
+            __DIR__ . '/../config/suitecrm.php' => config_path('suitecrm.php'),
+        ]);
     }
 
     /**
@@ -27,12 +27,15 @@ class SuiteCrmProvider extends ServiceProvider
      */
     public function register()
     {
-        Api::config([
-            'base_uri' => config('suitecrm.api.base_uri'),
-            'uri'      => config('suitecrm.api.uri'),
-        ])->addSession(
-            config('suitecrm.api.user'),
-            config('suitecrm.api.password')
-        );
+        if (! is_null(config('suitecrm.api'))) {
+            Api::config([
+                'base_uri' => config('suitecrm.api.base_uri'),
+                'uri'      => config('suitecrm.api.uri'),
+            ])->addSession(
+                config('suitecrm.api.user'),
+                config('suitecrm.api.password')
+            );
+        }
+
     }
 }
