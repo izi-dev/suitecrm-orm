@@ -13,6 +13,9 @@
     "mrcat29/html": "^0.0.1",
     "guzzlehttp/guzzle": "^6.2"
   },
+  "require-dev": {
+    "tymon/jwt-auth": "0.5.*"
+  },
   "autoload": {
     "psr-4": {
       "MrCat\\": "src/mrcat"
